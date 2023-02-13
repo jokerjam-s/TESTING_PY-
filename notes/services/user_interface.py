@@ -3,9 +3,6 @@
 
 '''
 
-
-
-
 class UserIterface:
 
     # Отображает пользовательское меню
@@ -16,24 +13,23 @@ class UserIterface:
         pass
 
     # запрашивает строковое значенееи у пользователя
-    #
+    #      message - сообщенеи для пользователя
     def ask_str(self, message):
-        pass
+        return input(message)
 
     # заправшивает целочисленное значение у пользователя
-    #
+    #   message - сообщенеи для пользователя
     def ask_int(self, message):
         pass
 
     # запращивает дату у пользователя в формате ДД.ММ.ГГГГ
-    #
-    #
+    #   message - сообщенеи для пользователя
     def ask_date(self, message):
         pass
 
 
     # запрашивает время у пользователя в формате ЧЧ:ММ
-    #
+    #   message - сообщенеи для пользователя
     def ask_time(self, mesage):
         pass
 
