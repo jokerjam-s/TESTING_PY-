@@ -9,8 +9,17 @@ class UserIterface:
     #   menu_dict - словарь с пунктами меню формата {int => str, ... }
     #   где ключевые значения соответствуют еомеру, заправшиваемому у пользователя
     #   если будет введено значение вне диапазока ключей - вернет 0
-    def show_menu(self, menu_dict):
-        pass
+    def show_menu(self, menu_dict:dict):
+        for i in menu_dict.keys():
+            print(i, " - ", menu_dict[i])
+
+        menu = int(input("> "))
+
+        if menu in menu_dict.keys():
+            return menu
+
+        return 0
+
 
     # запрашивает строковое значенееи у пользователя
     #      message - сообщенеи для пользователя
