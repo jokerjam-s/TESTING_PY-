@@ -45,7 +45,7 @@ class UserIterface:
     # запращивает дату у пользователя в формате ДД.ММ.ГГГГ
     #   message - сообщенеи для пользователя
     def ask_date(self, message):
-        now_date = datetime.datetime.date()
+        now_date = datetime.datetime.now()
 
         value = self.__ask_pattern__(message,
                                      "^(0?[1-9]|[12][0-9]|3[01])[.](0?[1-9]|1[012])[.](\\d{4})$",
@@ -57,12 +57,12 @@ class UserIterface:
     # запрашивает время у пользователя в формате ЧЧ:ММ
     #   message - сообщение для пользователя
     def ask_time(self, mesage):
-        now_time = datetime.datetime.time()
+        now_time = datetime.datetime.now()
 
         value = self.__ask_pattern__(mesage,
                                      "^([0-1][0-9]|2[0-3]):([0-5][0-9])$",
                                      "Ошибка, неверный ввод. По умолчанию текущее время",
-                                     now_time.strftime("%HH:MM"))
+                                     now_time.strftime("%H:%M"))
         return value
 
     # Запрашивает значение у пользователя согласно шаблона в случае ошибки
