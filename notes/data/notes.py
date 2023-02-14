@@ -2,6 +2,7 @@
 #
 
 class Note:
+    note_no = 0         # номер записи
     date_start = ""     # дата заметки
     time_start = ""     # время заметки
     text_note = ""      # текст заметки

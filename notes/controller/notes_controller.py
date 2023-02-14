@@ -1,6 +1,6 @@
 # Контроллер
-import services.*
 
+from notes.services.user_interface import *
 
 class NotesController:
     menu_dict = {
@@ -12,4 +12,8 @@ class NotesController:
     }
 
     def run(self):
-        UserInterface
+        ui = UserIterface()
+
+        menu = 1
+        while menu != 0:
+            menu = ui.show_menu(self.menu_dict)
