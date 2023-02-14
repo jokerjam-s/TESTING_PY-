@@ -9,6 +9,11 @@ class NoteList:
         self._note_counter = 0
         self._notes_list = []
 
+    # Установить список
+    def set_list(self, notes: list):
+        self._notes_list = notes
+
+    # получить список
     def get_list(self):
         return self._notes_list
 
@@ -23,8 +28,11 @@ class NoteList:
         self._notes_list.remove(note)
 
     # поиск заметок с текстом text
-    def find_on(self, text):
-        return list(filter(lambda n: text in n.text_note))
+    def find_on_text(self, text):
+        return list(filter(lambda n: text in n.text_note, self._notes_list))
+
+    def find_on_date(self, date):
+        return list(filter(lambda n: date == n.date_start, self._notes_list))
 
     # поиск заметки с номером note_no
     def get_note_no(self, note_no):
