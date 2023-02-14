@@ -3,13 +3,14 @@
 from notes.services.user_interface import *
 
 class NotesController:
-    menu_dict = {
-        1:"добавить",
-        2:"изменить",
-        3:"удалить",
-        4:"поиск",
-        0:"выход"
-    }
+    def __int__(self):
+        self.menu_dict = {
+            1:"добавить",
+            2:"изменить",
+            3:"удалить",
+            4:"поиск",
+            0:"выход"
+        }
 
     def run(self):
         ui = UserIterface()
