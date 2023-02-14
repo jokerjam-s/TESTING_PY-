@@ -23,7 +23,7 @@ class NoteList:
         self._notes_list.remove(note)
 
     # поиск заметок с текстом text
-    def find_notes(self, text):
+    def find_on(self, text):
         return list(filter(lambda n: text in n.text_note))
 
     # поиск заметки с номером note_no

@@ -5,4 +5,5 @@ from datetime import datetime
 def note_datetime(note: Note):
     return datetime.strptime(note.date_start + " "+note.time_start, "%d.%m.%Y %H:%M")
 
-
+def note_date(note: Note):
+    return datetime.strptime(note.date_start, "%d.%m.%Y")
