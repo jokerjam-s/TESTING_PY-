@@ -11,7 +11,9 @@ class NoteList:
 
     # Установить список
     def set_list(self, notes: list):
+        max_id = max(notes, key=lambda x: x.note_no)
         self._notes_list = notes
+        self._note_counter = max_id.note_no
 
     # получить список
     def get_list(self):

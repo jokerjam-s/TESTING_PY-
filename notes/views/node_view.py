@@ -12,7 +12,7 @@ class NoteView:
     # запрос новой заметки
     def new_note(self):
         note = Note()
-        note.date_start = self.ui.ask_str("Дата: ")
+        note.date_start = self.ui.ask_date("Дата: ")
         note.time_start = self.ui.ask_time("Время: ")
         note.text_note = self.ui.ask_str("Текст: ")
 
@@ -25,7 +25,7 @@ class NoteView:
     # редактирование заметки
     def edit_note(self, note: Note):
         note.note_no = note.note_no
-        note.date_start = self.ui.ask_date("Дата (" + note.date_start + "):")
+        note.date_start = self.ui.ask_date("Дата (" + note.date_start + "): ")
         note.time_start = self.ui.ask_time("Время (" + note.time_start + "): ")
         note.text_note = self.ui.ask_str("Новый текст: ")
 

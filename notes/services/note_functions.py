@@ -7,3 +7,4 @@ def note_datetime(note: Note):
 
 def note_date(note: Note):
     return datetime.strptime(note.date_start, "%d.%m.%Y")
+
